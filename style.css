@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#cards {
+  position: relative;
+  display: grid;
+  width: 50vw;
+  left: 25%;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#winText {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card {
+  height: 200px;
+  margin: 10px;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card-num {
+  position: relative;
+  top: -10px;
+}
+
+.card-suit {
+  position: relative;
+  top: -40px;
+}
