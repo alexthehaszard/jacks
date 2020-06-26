@@ -4,6 +4,16 @@ body {
   text-align: center;
 }
 
+p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#info {
+  justify-content: center;
+  display: flex;
+}
+
 #cards {
   position: relative;
   display: grid;
