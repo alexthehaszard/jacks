@@ -2,12 +2,21 @@
 <html>
   <head>
     <link href="style.css" rel="stylesheet" />
-    <script src="script.js" type="text/javascript"></script>
+    <script src="playcard.js" type="text/javascript"></script>
+    <script src="bot.js" type="text/javascript"></script>
+    <script defer src="script.js" type="text/javascript"></script>
   </head>
 
   <body>
+    <p id="winLoss">win/loss</p>
     <button onclick="placeCard()">Place Card</button>
+    <button onclick="setup()">Reset</button>
+    <button onclick="bot(); usingBot=true">Start bot</button>
     <p id="winText" style="display: none;">you win!!!</p>
-    <div id="cards"></div>
+    <div id="cards">
+      <div id="addCard" class="card" onclick="placeCard()">
+        <p class="card-num">+</p>
+      </div>
+    </div>
   </body>
 </html>
