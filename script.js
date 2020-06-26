@@ -5,6 +5,8 @@ let playCards = [];
 let currentCard;
 let currentCard2;
 let won;
+let endTime = 100;
+let betweenSwaps = 100;
 let usingBot = false;
 let wins = 0;
 let losses = 0;
@@ -73,12 +75,13 @@ function checkWin() {
     wins++;
     games++;
     document.getElementById("winLoss").innerHTML = `win/loss: ${wins/losses}`;
+    document.getElementById("wins").innerHTML = `wins: ${wins}`;
     console.log("games: " + games);
     if (usingBot === true) {
       setTimeout(() => {
         setup();
         bot();
-      }, 100);
+      }, endTime);
     }
     return true;
   }
@@ -106,12 +109,13 @@ function checkLoss() {
     losses++;
     games++;
     document.getElementById("winLoss").innerHTML = `win/loss: ${wins/losses}`;
+    document.getElementById("losses").innerHTML = `losses: ${losses}`;
     console.log("games: " + games);
     if (usingBot === true) {
       setTimeout(() => {
         setup();
         bot();
-      }, 100);
+      }, endTime);
     }
     return true;
   }

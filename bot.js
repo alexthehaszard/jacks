@@ -9,7 +9,7 @@ function bot() {
           playCards[j].cardClicked();
           setTimeout(() => {
             bot();
-          }, 100);
+          }, betweenSwaps);
           return;
         } else if (playCards[i].num > 10 && playCards[j].num > 10 && playCards[i].num !== playCards[j].num) {
           for (let k = j; k < playCards.length; k++) {
@@ -19,7 +19,7 @@ function bot() {
               playCards[k].cardClicked();
               setTimeout(() => {
                 bot();
-              }, 100);
+              }, betweenSwaps);
               return;
             }
           }
@@ -29,7 +29,7 @@ function bot() {
     placeCard();
     setTimeout(() => {
       bot();
-    }, 100);
+    }, betweenSwaps);
     return;
   }
 }
