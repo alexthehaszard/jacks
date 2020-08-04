@@ -12,6 +12,7 @@ let wins = 0;
 let losses = 0;
 let games = 0;
 let lost;
+let boxIsGreen = false;
 setup();
 shuffle();
 
@@ -126,4 +127,13 @@ function checkLoss() {
     return true;
   }
   return false;
+}
+
+function startBot() {
+  if (usingBot) {
+    usingBot = false;
+  } else {
+    usingBot = true;
+    bot();
+  }
 }

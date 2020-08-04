@@ -33,10 +33,11 @@ class PlayCard {
       this.element.style = "background-color: lightblue";
       currentCard = playCards[this.index];
     } else {
-      if (currentCard.num + this.num === 11) {
+      if (currentCard.num + this.num === 11 && !boxIsGreen) {
         this.element.style = "background-color: lightgreen";
         currentCard.element.style = "background-color: lightgreen";
-        if (usingBot === true) {
+        boxIsGreen = true;
+        if (usingBot === true && document.querySelector("input").checked) {
           this.element.style = "";
           if (currentCard) {
             currentCard.element.style = "";
@@ -48,6 +49,7 @@ class PlayCard {
           }
         } else {
           setTimeout(() => {
+            boxIsGreen = false;
             this.element.style = "";
             if (currentCard) {
               currentCard.element.style = "";
@@ -64,12 +66,14 @@ class PlayCard {
         currentCard2.element.style = "background-color: lightblue";
       } else if (
         currentCard2 &&
-        currentCard.num + currentCard2.num + this.num === 36
+        currentCard.num + currentCard2.num + this.num === 36 &&
+        !boxIsGreen
       ) {
         this.element.style = "background-color: lightgreen";
         currentCard.element.style = "background-color: lightgreen";
         currentCard2.element.style = "background-color: lightgreen";
-        if (usingBot === true) {
+        boxIsGreen = true;
+        if (usingBot === true && document.querySelector("input").checked) {
           this.element.style = "";
           if (currentCard) {
             currentCard.element.style = "";
@@ -88,6 +92,7 @@ class PlayCard {
           currentCard2 = null;
         } else {
           setTimeout(() => {
+            boxIsGreen = false;
             this.element.style = "";
             if (currentCard) {
               currentCard.element.style = "";
@@ -106,7 +111,7 @@ class PlayCard {
             currentCard2 = null;
           }, 200);
         }
-      } else {
+      } else if (!boxIsGreen) {
         this.element.style = "background-color: lightcoral";
         currentCard.element.style = "background-color: lightcoral";
         if (currentCard2) {

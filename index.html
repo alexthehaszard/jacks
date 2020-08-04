@@ -13,9 +13,10 @@
       <p id="wins">wins</p>
       <p id="losses">losses</p>
     </div>
-    <button onclick="placeCard()">Place Card</button>
     <button onclick="setup()">Reset</button>
-    <button onclick="bot(); usingBot=true">Start bot</button>
+    <button onclick="startBot()">Start/Stop bot</button>
+    <input type="checkbox" name="fast" />
+    <label for="fast" style="font-size: 1rem;">Fast Bot</label>
     <p id="winText" style="display: none;">you win!!!</p>
     <div id="cards">
       <div id="addCard" class="card" onclick="placeCard()">

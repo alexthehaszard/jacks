@@ -2,11 +2,14 @@ function bot() {
   checkLoss();
   checkWin();
   if (won === false && lost === false) {
+    if (!document.querySelector("input").checked) betweenSwaps = 300;
+    else betweenSwaps = 10;
     for (let i = 0; i < playCards.length; i++) {
       for (let j = i + 1; j < playCards.length; j++) {
         if (playCards[i].num + playCards[j].num === 11) {
           playCards[i].cardClicked();
           playCards[j].cardClicked();
+          if (!usingBot) return;
           setTimeout(() => {
             bot();
           }, betweenSwaps);
@@ -24,6 +27,7 @@ function bot() {
               playCards[i].cardClicked();
               playCards[j].cardClicked();
               playCards[k].cardClicked();
+              if (!usingBot) return;
               setTimeout(() => {
                 bot();
               }, betweenSwaps);
@@ -34,6 +38,7 @@ function bot() {
       }
     }
     placeCard();
+    if (!usingBot) return;
     setTimeout(() => {
       bot();
     }, betweenSwaps);
