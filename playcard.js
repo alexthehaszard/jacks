@@ -38,6 +38,7 @@ class PlayCard {
         currentCard.element.style = "background-color: lightgreen";
         boxIsGreen = true;
         if (usingBot === true && document.querySelector("input").checked) {
+          boxIsGreen = false;
           this.element.style = "";
           if (currentCard) {
             currentCard.element.style = "";
@@ -74,6 +75,7 @@ class PlayCard {
         currentCard2.element.style = "background-color: lightgreen";
         boxIsGreen = true;
         if (usingBot === true && document.querySelector("input").checked) {
+          boxIsGreen = false;
           this.element.style = "";
           if (currentCard) {
             currentCard.element.style = "";
