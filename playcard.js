@@ -60,6 +60,7 @@ class PlayCard {
               currentCard.updateElement(1);
               currentCard = null;
             }
+            updateCardsLeft();
           }, 200);
         }
       } else if (currentCard.num > 10 && this.num > 10 && !currentCard2) {
@@ -111,6 +112,7 @@ class PlayCard {
             }
             currentCard = null;
             currentCard2 = null;
+            updateCardsLeft();
           }, 200);
         }
       } else if (!boxIsGreen) {
@@ -129,6 +131,7 @@ class PlayCard {
           }
           currentCard = null;
           currentCard2 = null;
+          updateCardsLeft();
         }, 200);
       }
     }

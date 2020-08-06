@@ -64,6 +64,7 @@ function placeCard() {
     }
     checkLoss();
   }
+  updateCardsLeft();
 }
 
 function checkWin() {
@@ -149,4 +150,14 @@ function showRules() {
     document.querySelector("#showRules").innerHTML = "Show Rules";
     showingRules = false;
   }
+}
+
+function updateCardsLeft() {
+  const cardsLeft =
+    deck[0].length + deck[1].length + deck[2].length + deck[3].length;
+  const output =
+    cardsLeft === 0 ? "\ud83c\udfc6 You win!" : `Cards Left: ${cardsLeft}`;
+  document.querySelector("#cardsLeft").innerHTML = output;
+  checkWin();
+  checkLoss();
 }
