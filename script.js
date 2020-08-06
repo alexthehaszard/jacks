@@ -13,6 +13,7 @@ let losses = 0;
 let games = 0;
 let lost;
 let boxIsGreen = false;
+let showingRules = false;
 setup();
 shuffle();
 
@@ -135,5 +136,17 @@ function startBot() {
   } else {
     usingBot = true;
     bot();
+  }
+}
+
+function showRules() {
+  if (!showingRules) {
+    document.querySelector("#rules").style = "";
+    document.querySelector("#showRules").innerHTML = "Hide Rules";
+    showingRules = true;
+  } else {
+    document.querySelector("#rules").style = "display: none";
+    document.querySelector("#showRules").innerHTML = "Show Rules";
+    showingRules = false;
   }
 }
