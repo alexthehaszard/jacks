@@ -17,7 +17,3 @@ there is a win and loss counter that will automatically update as you play.
 ## odds of winning
 
 the odds of winning this game (calculated by letting it play 100000 games) is around 16.4%
-
-## to do
-
-i plan to make a counter with the remaining number of cards in the deck and make it look a lot nicer, but the functionality is there right now.
