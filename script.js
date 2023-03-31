@@ -76,7 +76,7 @@ function checkWin() {
     won = true;
     wins++;
     games++;
-    document.getElementById("winLoss").innerHTML = `win/loss: ${wins / losses}`;
+    document.getElementById("winLoss").innerHTML = `win %: ${wins / games}`;
     document.getElementById("wins").innerHTML = `wins: ${wins}`;
     console.log("games: " + games);
     if (usingBot === true) {
@@ -117,7 +117,7 @@ function checkLoss() {
     lost = true;
     losses++;
     games++;
-    document.getElementById("winLoss").innerHTML = `win/loss: ${wins / losses}`;
+    document.getElementById("winLoss").innerHTML = `win %: ${wins / games}`;
     document.getElementById("losses").innerHTML = `losses: ${losses}`;
     console.log("games: " + games);
     if (usingBot === true) {

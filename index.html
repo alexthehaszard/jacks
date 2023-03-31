@@ -10,12 +10,12 @@
 
   <body>
     <div id="info">
-      <p id="winLoss">win/loss</p>
+      <p id="winLoss">win %</p>
       <p id="wins">wins</p>
       <p id="losses">losses</p>
     </div>
     <button id="showRules" onclick="showRules()">Show Rules</button>
-    <div id="rules" style="display: none;">
+    <div id="rules" style="display: none">
       <h3>How to play Jacks!</h3>
       <p>
         Jacks is a solo card game where the goal is to get to the end of the
@@ -28,8 +28,8 @@
     <button onclick="setup()">Reset</button>
     <button onclick="startBot()">Start/Stop bot</button>
     <input type="checkbox" name="fast" />
-    <label for="fast" style="font-size: 1rem;">Fast Bot</label>
-    <label for="" id="cardsLeft" style="font-size: 1rem;">Cards Left:</label>
+    <label for="fast" style="font-size: 1rem">Fast Bot</label>
+    <label for="" id="cardsLeft" style="font-size: 1rem">Cards Left:</label>
     <div id="cards">
       <div id="addCard" class="card" onclick="placeCard()">
         <p class="card-num">+</p>
