@@ -16,4 +16,4 @@ there is a win and loss counter that will automatically update as you play.
 
 ## odds of winning
 
-the odds of winning this game (calculated by letting it play 100000 games) is around 16.4%
+the odds of winning this game (calculated by letting it play 100000 games) is around 14.2%
